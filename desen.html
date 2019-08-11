@@ -100,6 +100,92 @@
                 </ul>
             </div>
         </nav>
+    <div id="audimaWidget" class="audima-position-default" style="display: block;"><style>
+     #audimaPlayer,
+     #audimaMostrarMenuBtn:focus,
+     #audimaOcultaMenuBtn:focus,
+     #audimaSpeedDownButton:focus,
+     #audimaSpeedUpButton:focus,
+     #audimaRewindButton:focus,
+     #audimaForwardButton:focus,
+     #audimaTranslateButton:focus {
+         outline: none;
+     }
+
+    .screen-reader-text {
+         outline: none;
+         border:0;
+         clip: rect(1px, 1px, 1px, 1px);
+         clip-path: inset(50%);
+         height: 1px;
+         margin: -1px;
+         width: 1px;
+         overflow: hidden;
+         position: absolute !important;
+         word-wrap: normal !important;
+    }
+
+    .screen-reader-text-btn {
+         outline: none;
+         border:0;
+         clip: rect(1px, 1px, 1px, 1px);
+         clip-path: inset(50%);
+         height: 1px;
+         margin: -1px;
+         width: 1px;
+         overflow: hidden;
+         position: absolute !important;
+         word-wrap: normal !important;
+    }
+     .esconde-audima-play {
+         display: none;
+     }
+</style>
+
+
+<audima-div id="audimaPlayer" class="esconde-audima-play" tabindex="0">
+    <span class="screen-reader-text" role="alert" autofocus="">Bem vindo ao Player Audima. Clique TAB para navegar entre os botões,
+    ou aperte CONTROL PONTO para dar PLAY. CONTROL PONTO E VÍRGULA ou BARRA para avançar. CONTROL VÍRGULA para retroceder.
+    ALT PONTO E VÍRGULA ou BARRA para acelerar a velocidade de leitura. ALT VÍRGULA para desacelerar a velocidade de leitura.</span>
+    <button id="audimaPlayBtn" class="icon-play audima-play-widget" role="button"><span class="screen-reader-text-btn">Play!</span></button>
+    <audima-p id="audimaPlayerDisplay">
+        <audima-span id="audimaPlayerText" title="Ou&amp;ccedil;a: Programando.com - O site da programação" style="width: 301px;">Ouça: Programando.com - O site da programação</audima-span>
+    </audima-p>
+    <audima-p id="audimaTimePosition" class="audima-timetext">0:00</audima-p>
+    <audima-div id="audimaProgressBar" role="slider">
+        <input type="range" id="audimaProgressSlider" min="0" max="100" value="0" step="any" style="position: absolute; z-index: 1 !important;  height: inherit !important;">
+        <audima-span class="audima-progress-bar-bg"></audima-span>
+        <audima-span class="audima-progressing"></audima-span>
+        <!--<audima-span id="audimaProgressMarker" draggable="true"></audima-span>-->
+    </audima-div>
+    <audima-p id="audimaTimeDuration" class="audima-timetext">100%</audima-p>
+    <audima-a id="audimaLogo" class="icon-audima" href="http://audima.co" title="Áudio fornecido por: Audima">Audima</audima-a>
+    <button id="audimaMostrarMenuBtn" class="icon-menu "><span class="screen-reader-text">Abrir menu de opções do player Audima.</span></button>
+    <audima-div id="audimaMenuControls">
+        <button id="audimaSpeedDownButton" class="audima-btn-controls icon-slow "><span class="screen-reader-text"> Reduzir a velocidade da voz em </span>5%</button>
+        <button id="audimaSpeedUpButton" class="audima-btn-controls icon-speed "><span class="screen-reader-text">Aumentar a velocidade da voz em </span>5%</button>
+        <button id="audimaRewindButton" class="audima-btn-controls icon-previous "><span class="screen-reader-text">Retroceder o áudio </span>10s</button>
+        <button id="audimaForwardButton" class="audima-btn-controls icon-next "><span class="screen-reader-text">Avançar o áudio </span>10s</button>
+        <button id="audimaTranslateButton" class="audima-btn-controls icon-globe " style="display: none;">Traduzir<span class="screen-reader-text"> o áudio e texto da página.</span></button>
+        <audima-div id="audimaMenuTranslate">
+            <span class="screen-reader-text">Caixa de seleção com os idiomas suportados para tradução. </span>
+            <select id="audimaSelectLanguage">
+                <option value="pt-BR" selected="selected">Português - BR</option>
+                <option value="en">English - US</option>
+            </select>
+        </audima-div>
+        <button id="audimaOcultaMenuBtn" class="icon-close">Fechar <span class="screen-reader-text">o menu de opções do player Audima</span></button>
+    </audima-div>
+</audima-div>
+<audima-div id="audimaBanner" class="esconde-audima-play">
+    <audima-p style="display: none;" id="audimaSponsoredBy">
+
+    </audima-p>
+</audima-div>
+<button id="audimaBtnSideBar" title="Ou&amp;ccedil;a: Programando.com - O site da programação" class="esconde-audima-play">
+    <audima-p id="audimaverticalText">Ouça este conteúdo</audima-p>
+</button>
+</div>
     <h2>Desenvolvendo</h2>
     <p>Mostraremos alguns exemplos de código que citamos na página inicial.</p>
 
